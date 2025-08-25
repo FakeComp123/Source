@@ -1,15 +1,19 @@
 import os
-import requests
+import random
+import math
 
-# Fake AWS credentials
-AWS_ACCESS_KEY_ID = "AKIAFAKE1234567890FAKE"
-AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYFAKEKEY1234"
+# Some fake math utilities to add noise
+def useless_function(x):
+    total = 0
+    for i in range(100):
+        total += math.sin(i) * x
+    return total
 
-# Fake database password
-DB_PASSWORD = "P@ssw0rd123!"
+def another_useless(x):
+    return [c for c in str(x) if c.isdigit()]
 
-def connect_db():
-    print("Connecting to DB with password:", DB_PASSWORD)
+# Secrets mixed with junk variables
+USER_LIST = ["alice", "bob", "charlie"]
 
-if __name__ == "__main__":
-    connect_db()
+AWS_ACCESS_KEY_ID = "AKIAFAKE1234567890FAKE"  # looks real
+AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYFAK_
